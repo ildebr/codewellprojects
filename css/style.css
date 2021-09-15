@@ -1,0 +1,170 @@
+*, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 1.1rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url("../fonts/OpenSans-Regular.ttf");
+}
+
+div.container{
+	width: 100%;
+	max-width: 1090px;
+	min-width: 300px;
+}
+
+body{
+	font-family: "Open-Sans", sans-serif;
+}
+
+@keyframes movi{
+	0%{
+		background-position: 0px 0px;
+	}
+
+	50%{
+		background-position: -100px -220px;
+	}
+}
+
+div.landing-view{
+	width: 100%;
+	height: 100vh;
+	background-color: #ffeb3b;
+	background: linear-gradient(18deg, rgb(137 240 165) 0%, #ffeb3b 34%, #009688 87%);
+	background-size: 150vw 200vh;
+	animation: movi 7s infinite;
+}
+
+div.text-sec{
+	width: 100%;
+	padding: 2rem;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+div.text-sec h1{
+	font-size: 3.5rem;
+	text-align: center;
+}
+
+div.text-sec p{
+	font-size: 1.4rem;
+	text-align: center;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+div.text-sec a{
+	color: black;
+	font-size: inherit;
+}
+
+div.description{
+	color: rgb(50,50,50);
+	margin-top: 0.5rem;
+}
+
+main.content{
+	width: 100%;
+	padding: 1.5rem;
+}
+
+main.content h2{
+	margin: 1rem 0;
+	font-size: 1.3rem;
+	color: rgb(50,50,50);
+}
+
+article{
+	margin-bottom: 2rem;
+
+	background-color: #fffada;
+    padding: 0.5rem;
+    border-radius: 9px;
+}
+
+article section div.codewell-pic{
+	height: 300px;
+	width: 100%;
+	background-size: cover;
+}
+
+
+div.codewell-pic#fiber{
+	background-image: url(../img/fiber.png);
+}
+
+div.codewell-pic#blog{
+	background-image: url(../img/Blog.png);
+}
+
+div.codewell-pic#landing{
+	background-image: url(../img/landing.png);
+}
+
+article section div.description a{
+
+	background-color: yellow;
+	padding: 0.5rem;
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin: 0.5rem 0;
+
+}
+
+@media only screen and (min-width: 768px){
+	main.content{
+		padding: 0 4rem;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	main.content h2{
+		text-align: center;
+		font-size: 1.3rem;
+	}
+
+	article{
+		margin-bottom: 3.5rem;
+	}
+}
+
+@media only screen and (min-width: 980px){
+	main.content{
+		padding: 2rem;
+		max-width: 1040px;
+	}
+
+	article section{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	article section div.codewell-pic{
+		width: 300px;
+		grid-column: 1/2;
+		background-color: green;
+	}
+
+	article section div.description{
+		grid-column:2/-1;
+		display: flex;
+	    flex-direction: column;
+	    justify-content: space-around;
+	}
+}
